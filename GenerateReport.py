@@ -14,7 +14,7 @@ import plotly
 # Poner credenciales si lanza error de autenticación
 #plotly.tools.set_credentials_file(username='david.bet.san', api_key='lr1c37zw81')
 
-token = 'EAACEdEose0cBAGGodDZBZB40dMVz4MRqVtlQsgXzdmlXUBVWJivJ9cyMZCZCgbtnx2PwovWJrTs7QVbNdEkC6QLZBsq91nZAErdq6e1Gfc4OlQtEzfgLRp1ePqe1kQd0lZC2mk2IWPUZCiyou5ySPXCMbo0NpZBYglFnqRAaWVJuJnoM3BQoANB7Grwe2c3ky4LvrJhk9lba84AZDZD'
+token = 'token'
 desde = '2018-04-01'
 hasta = '2018-04-13'
 
