@@ -9,8 +9,12 @@ import time
 import random
 from tkinter import filedialog
 from tkinter import *
+import plotly
 
-token = 'token'
+# Poner credenciales si lanza error de autenticación
+#plotly.tools.set_credentials_file(username='david.bet.san', api_key='lr1c37zw81')
+
+token = 'EAACEdEose0cBAGGodDZBZB40dMVz4MRqVtlQsgXzdmlXUBVWJivJ9cyMZCZCgbtnx2PwovWJrTs7QVbNdEkC6QLZBsq91nZAErdq6e1Gfc4OlQtEzfgLRp1ePqe1kQd0lZC2mk2IWPUZCiyou5ySPXCMbo0NpZBYglFnqRAaWVJuJnoM3BQoANB7Grwe2c3ky4LvrJhk9lba84AZDZD'
 desde = '2018-04-01'
 hasta = '2018-04-13'
 
@@ -162,7 +166,7 @@ def slice_df(desde, hasta, df_fb, df_insta):
 def generate_engagement_plot_url(df,num):
     # num es el numero de la grafica
     trace1 = go.Bar(
-        x='Post ' + df.index.map(str) + ' del ' + df['date'],
+        x='<a href="' + df['post_url'] + '">Post ' + df.index.map(str) + ' del ' + df['date'] + '</a>',
         y=df['engagements'],
         xaxis='x2',
         yaxis='y2',
@@ -219,7 +223,7 @@ def generate_matrix(df_f):
 
 <!-- Header -->
 <div class="header" id="myHeader">
-  <h1>Image Grid</h1>
+  <h1>Info Matrix</h1>
 </div>
 
 <!-- Photo Grid -->
