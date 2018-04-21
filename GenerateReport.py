@@ -20,10 +20,11 @@ hasta = '2018-04-13'
 
 
 def req_facebook(req):
-    print()
+    # Hace el request en la api
     r = requests.get("https://graph.facebook.com/v2.12/" + req, {'access_token' : token})
     return r
 def get_insta_data():
+    # Makes the instagram request with the data yu need
     req = '17841406251079989/media?fields=like_count,comments_count,caption,ig_id,media_url,timestamp,permalink'
     r = req_facebook(req)
     results = r.json()
@@ -33,8 +34,8 @@ def get_insta_data():
     while True:
         try:
             time.sleep(random.randint(2,5))
-            data.extend(results['data'])
-            r = requests.get(results['paging']['next'])
+            data.extend(results['data']) # introduce the data available in the request
+            r = requests.get(results['paging']['next'])  # all of the info is distributed in pages in the api, so the next command takes you to the next page
             results = r.json()
             i += 1
         except:
@@ -43,6 +44,7 @@ def get_insta_data():
 
     return data
 def get_fb_data():
+    # same as get_insta_data
     req = 'me/feed?fields=comments.limit(1).summary(true),likes.limit(1).summary(true),shares,permalink_url'
     r = req_facebook(req)
     results = r.json()
@@ -77,7 +79,7 @@ def likes_comments_reaches_insta():
         likes[i] = each_post['like_count']
         post_url[i] = each_post['permalink']
         date[i] = each_post['timestamp'][0:10]
-        req = each_post['id'] + '/insights?metric=reach'
+        req = each_post['id'] + '/insights?metric=reach' # to get the reaches you have to get inside the insights
         r = req_facebook(req)
         info = r.json()
         reach = info['data'][0]['values'][0]['value']
@@ -104,11 +106,11 @@ def likes_comments_reaches_fb():
     date = [None]*len(data)
 
     for each_post in data:
-        comments[i] = each_post['comments']['summary']['total_count']
+        comments[i] = each_post['comments']['summary']['total_count'] # as like_count or comment_count is not available, u have to get the summary
         likes[i] = each_post['likes']['summary']['total_count']
 
         try:
-            shares[i] = each_post['shares']['count']
+            shares[i] = each_post['shares']['count'] # sometimes there is not shares
         except:
             shares[i] = 0
 
