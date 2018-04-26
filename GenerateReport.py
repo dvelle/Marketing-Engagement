@@ -89,7 +89,7 @@ def likes_comments_reaches_insta():
             engagement[i] = 0
             print('El alcance del post es cero, por lo tanto el engagement se pone en 0')
         else:
-            engagement[i] = (likes[i] + (2 * comments[i])) / reaches[i]
+            engagement[i] = ((likes[i] + (2 * comments[i])) / reaches[i]) * 100
         i += 1
 
     return likes,comments,reaches,engagement,post_url,date
@@ -135,7 +135,7 @@ def likes_comments_reaches_fb():
             engagement[i] = 0
             print('El alcance del post es cero, por lo tanto el engagement se pone en 0')
         else:
-            engagement[i] = (likes[i] + (2*comments[i]) + (2*shares[i])) / reaches[i]
+            engagement[i] = ((likes[i] + (2*comments[i]) + (2*shares[i])) / reaches[i]) * 100
         i += 1
 
     return likes,comments,shares,reaches,engagement,post_url,date
