@@ -17,7 +17,8 @@ import plotly
 token = 'token'
 desde = '2018-04-01'
 hasta = '2018-04-13'
-
+new_foll_insta = '100'
+new_foll_fb = '100'
 
 def req_facebook(req):
     # Hace el request en la api
@@ -264,11 +265,65 @@ def generate_html(url_fb, url_insta, df_f, df_i, folder_selected):
         <head>
 
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-            <style>body{ margin:0 100; background:whitesmoke; }</style>
+            <style>
+                .body{ margin:0 100; background:whitesmoke; }
+                .row {
+                    display: -ms-flexbox; /* IE 10 */
+                    display: flex;
+                    -ms-flex-wrap: wrap; /* IE 10 */
+                    flex-wrap: wrap;
+                    padding: 0 4px;
+                }
+                
+                .column {
+                    -ms-flex: 15%; /* IE 10 */
+                    flex: 15%;
+                    padding: 0 4px;
+                }
+                
+                .spinner.loading {
+                  display: none;
+                  text-align: center;
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100px;
+                  height: 100px;
+                }
+                
+                .spinner.loading:before {
+                  content: "";
+                  height: 100px;
+                  width: 100px;
+                
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border-width: 20px;
+                  border-style: solid;
+                  border-color: #bf0000 #ccc #ccc;
+                  border-radius: 100%;
+                  animation: rotation 1.5s infinite linear;
+                }
+                
+                
+                @keyframes rotation {
+                  from {
+                    transform: rotate(0deg);
+                  }
+                  to {
+                    transform: rotate(359deg);
+                  }
+                }
+                
+                
+            </style>
             
             <script async defer src="http://www.instagram.com/embed.js"></script>
             <title> Informe '''+ desde + ''' - ''' + hasta + ''' </title>
         </head>
+        
         <body>
             <h1> Informe '''+ desde + ''' - ''' + hasta + ''' </h1>
             <img src="https://i2.wp.com/rojoanteojo.com/wp-content/uploads/2018/02/cropped-Rojo-Anteojo_Color_SM.png?fit=242%2C250" alt="Rojo Anteojo">
@@ -276,6 +331,11 @@ def generate_html(url_fb, url_insta, df_f, df_i, folder_selected):
 
             <!-- *** Instagram *** --->
             <h2>Instagram</h2>
+            <h2>Nuevos seguidores</h2>
+            <div id="divSpinner" class="spinner loading">
+  			 <h1>''' + new_foll_insta + '''</h1>
+		    </div>
+		    <br>
             <iframe width="1000" height="450" frameborder="0" seamless="seamless" scrolling="yes" \
             src="''' + url_insta + '''.embed?width=800&height=450"></iframe>
             <br><br>
@@ -302,6 +362,11 @@ def generate_html(url_fb, url_insta, df_f, df_i, folder_selected):
 
             <!-- *** Facebook *** --->
             <h2>Facebook</h2>
+            <h2>Nuevos seguidores</h2>
+            <div id="divSpinner" class="spinner loading">
+  			 <h1>''' + new_foll_fb + '''</h1>
+		    </div>
+		    <br>
             <iframe width="1000" height="450" frameborder="0" seamless="seamless" scrolling="yes" \
             src="''' + url_fb + '''.embed?width=800&height=450"></iframe>
             <br><br>''' + matrix_html + '''
