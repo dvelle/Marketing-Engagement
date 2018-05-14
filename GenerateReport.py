@@ -12,7 +12,7 @@ from tkinter import *
 import plotly
 
 # Poner credenciales si lanza error de autenticación
-#plotly.tools.set_credentials_file(username='david.bet.san', api_key='lr1c37zw81')
+#plotly.tools.set_credentials_file(username='david.bet.san', api_key='xxxxxxx')
 
 token = 'token'
 desde = '2018-04-01'
