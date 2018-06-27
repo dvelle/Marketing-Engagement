@@ -14,9 +14,9 @@ import plotly
 # Poner credenciales si lanza error de autenticación
 #plotly.tools.set_credentials_file(username='david.bet.san', api_key='xxxxxxx')
 
-token = 'token'
-desde = '2018-04-01'
-hasta = '2018-04-13'
+token = 'EAACEdEose0cBAJ3rl4onMIuP0PYLpiGgl9sZC5gpbC9W53vRyVmt3BWScwM6h5ZARGyWmPDiCZBsmdY0fsiqZBMWcZBP1puGjMApKTOIwQs3FNWooHoMycl7KbOOUOsMWRusDTUuIrHhwijA33ZClte1l4ZCTbdk27hP6GXrKYZBgbIT85ENvJmkuaYLZBIda2AZCyAXJr2QV16QZDZD'
+desde = '2018-05-01'
+hasta = '2018-06-30'
 new_foll_insta = '100'
 new_foll_fb = '100'
 
@@ -25,8 +25,14 @@ def req_facebook(req):
     r = requests.get("https://graph.facebook.com/v2.12/" + req, {'access_token' : token})
     return r
 def get_insta_data():
-    # Makes the instagram request with the data yu need
-    req = '17841406251079989/media?fields=like_count,comments_count,caption,ig_id,media_url,timestamp,permalink'
+    # Makes the instagram request with the data you need
+    # req = '17841406251079989/media?fields=like_count,comments_count,caption,ig_id,media_url,timestamp,permalink'
+    req = 'me?fields=id,name,connected_instagram_account'
+    r = req_facebook(req)
+    results = r.json()
+    id = results['connected_instagram_account']['id']
+
+    req = id + '/media?fields=like_count,comments_count,caption,ig_id,media_url,timestamp,permalink'
     r = req_facebook(req)
     results = r.json()
     data = []
@@ -83,7 +89,12 @@ def likes_comments_reaches_insta():
         req = each_post['id'] + '/insights?metric=reach' # to get the reaches you have to get inside the insights
         r = req_facebook(req)
         info = r.json()
-        reach = info['data'][0]['values'][0]['value']
+        try:
+            reach = info['data'][0]['values'][0]['value']
+        except:
+            reach = 0
+            print(info)
+            print("Revisar si depronto la fecha es antes de ser una bussiness account")
         reaches[i] = reach
 
         if reaches[i] == 0:

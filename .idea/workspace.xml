@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55c0afe7-a7bf-458f-b33b-8b5b0eb93e06" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/RojoAnteojo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RojoAnteojo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenerateReport.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateReport.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,26 +16,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GenerateReport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="183" column="42" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
+            <state relative-caret-position="378">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="79" />
               <folding>
-                <element signature="n#!!doc" />
                 <element signature="e#58#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fb_fans_country.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fb_fans_country.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
-              <folding>
-                <element signature="e#51#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,8 +50,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/GenerateReport.py" />
         <option value="$PROJECT_DIR$/fb_fans_country.py" />
+        <option value="$PROJECT_DIR$/GenerateReport.py" />
       </list>
     </option>
   </component>
@@ -109,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fb_fans_country">
+  <component name="RunManager" selected="Python.GenerateReport">
     <configuration name="GenerateReport" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RojoAnteojo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,8 +142,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.fb_fans_country" />
         <item itemvalue="Python.GenerateReport" />
+        <item itemvalue="Python.fb_fans_country" />
       </list>
     </recent_temporary>
   </component>
@@ -207,19 +197,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21800596" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21759747" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30032644" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.31944445" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30092594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3294753" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -248,10 +238,29 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GenerateReport.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4725">
+          <caret line="183" column="42" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
+          <folding>
+            <element signature="e#58#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fb_fans_country.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+          <folding>
+            <element signature="e#51#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenerateReport.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2928">
           <caret line="183" column="42" lean-forward="true" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -272,7 +281,6 @@
         <state relative-caret-position="176">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -283,7 +291,6 @@
         <state relative-caret-position="336">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -294,7 +301,6 @@
         <state relative-caret-position="1968">
           <caret line="123" column="67" lean-forward="true" selection-start-line="123" selection-start-column="67" selection-end-line="123" selection-end-column="67" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -305,7 +311,6 @@
         <state relative-caret-position="144">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -316,7 +321,6 @@
         <state relative-caret-position="304">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -327,7 +331,6 @@
         <state relative-caret-position="304">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -338,7 +341,6 @@
         <state relative-caret-position="416">
           <caret line="170" column="19" lean-forward="true" selection-start-line="170" selection-start-column="19" selection-end-line="170" selection-end-column="19" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -349,7 +351,6 @@
         <state relative-caret-position="2592">
           <caret line="162" column="36" lean-forward="true" selection-start-line="162" selection-start-column="36" selection-end-line="162" selection-end-column="36" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -360,7 +361,6 @@
         <state relative-caret-position="1504">
           <caret line="101" column="26" lean-forward="true" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
           <folding>
-            <element signature="n#!!doc" />
             <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
@@ -373,23 +373,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GenerateReport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="183" column="42" selection-start-line="183" selection-start-column="42" selection-end-line="183" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#58#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fb_fans_country.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
           <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
           <folding>
             <element signature="e#51#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GenerateReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="79" />
+          <folding>
+            <element signature="e#58#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
